@@ -13,14 +13,14 @@
         <aside class="sidebar">
             <div class="profile">
                 <img src="C:\Users\Ahmad\Desktop\SkyCouchingTask3\img1.png" alt="Profile Picture">
-                <h2>Sundar Gurung</h2>
-                <p>sundargurung360@gmail.com</p>
+                <h2>Maha Arshad</h2>
+                <p>mak@gmail.com</p>
             </div>
             <nav class="nav">
                 <ul>
                     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-exclamation-circle"></i> Vital Task</a></li>
-                    <li><a href="#"><i class="fas fa-tasks"></i> My Task</a></li>
+                    <li><a href="vitaltask.html"><i class="fas fa-exclamation-circle"></i> Vital Task</a></li>
+                    <li><a href="mytask1.html"><i class="fas fa-tasks"></i> My Task</a></li>
                     <li><a href="#"><i class="fas fa-list"></i> Task Categories</a></li>
                     <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                     <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
@@ -51,38 +51,108 @@
                 </div>
             </header>
             <div class="welcome-message">
-                <h2>Welcome back, Sundar <span class="wave">👋</span></h2>
+                <h2>Welcome back, Maha <span class="wave">👋</span></h2>
             </div>
             <div class="task-section">
                 <div class="to-do">
-                    <h3>To-Do</h3>
-                    <div class="task">
-                        <h4>Attend Nischal's Birthday Party</h4>
-                        <p>Buy gifts on the way and pick up cake from the bakery. (6 PM | Fresh Elements)</p>
-                        <p><strong>Priority:</strong> Moderate &nbsp;&nbsp; <strong>Status:</strong> Not Started</p>
+                     <div class="header-left">
+                    <i class="fas fa-clipboard-list todo-icon"></i>
+                    <h2 class="section-title">To-Do</h2>
+                    <span class="add-task" onclick="openTaskModal()"><i class="fas fa-plus"></i> Add task</span>
+                </div>
+                <div class="header-right">
+                    <span>20 June - Today</span>
+                </div>
+          
+
+            <div class="todo-list" id="todo-list">
+                <!-- Existing Tasks (initially hard-coded) -->
+                <div class="todo-item">
+                    <div class="todo-header">
+                        <span class="priority-icon" style="color: red;">&#9679;</span>
+                        <h4>Attend Nischal’s Birthday Party</h4>
+                    </div>
+                    <p>Buy gifts on the way and pick up cake from the bakery. (6 PM | Fresh Elements)</p>
+                    <p><strong>Priority:</strong> Moderate &nbsp;&nbsp; <strong>Status:</strong> Not Started</p>
+                    <p class="created-date">Created on: 20/06/2023</p>
+                    <div class="task-options">
+                        <label class="attach-file">
+                            <i class="fas fa-paperclip"></i> Attach file
+                            <input type="file" class="file-input" />
+                        </label>
                     </div>
                 </div>
-                <div class="task-status">
-                    <h3>Task Status</h3>
-                    <div class="status-item">
-                        <div class="status-circle" style="border-color: green;">
-                            <span>84%</span>
-                        </div>
-                        <p>Completed</p>
+
+                <div class="todo-item">
+                    <div class="todo-header">
+                        <span class="priority-icon" style="color: blue;">&#9679;</span>
+                        <h4>Landing Page Design for TravelDays</h4>
                     </div>
-                    <div class="status-item">
-                        <div class="status-circle" style="border-color: blue;">
-                            <span>46%</span>
-                        </div>
-                        <p>In Progress</p>
-                    </div>
-                    <div class="status-item">
-                        <div class="status-circle" style="border-color: red;">
-                            <span>13%</span>
-                        </div>
-                        <p>Not Started</p>
+                    <p>Get the work done by EOD and discuss with client before leaving. (4 PM | Meeting Room)</p>
+                    <p><strong>Priority:</strong> Moderate &nbsp;&nbsp; <strong>Status:</strong> In Progress</p>
+                    <p class="created-date">Created on: 20/06/2023</p>
+                    <div class="task-options">
+                        <label class="attach-file">
+                            <i class="fas fa-paperclip"></i> Attach file
+                            <input type="file" class="file-input" />
+                        </label>
                     </div>
                 </div>
+
+                <div class="todo-item">
+                    <div class="todo-header">
+                        <span class="priority-icon" style="color: blue;">&#9679;</span>
+                        <h4>Presentation on Final Product</h4>
+                    </div>
+                    <p>Make sure everything is functioning and all the necessities are properly met. Prepare the team and get the documents ready for tomorrow.</p>
+                    <p><strong>Priority:</strong> Moderate &nbsp;&nbsp; <strong>Status:</strong> In Progress</p>
+                    <p class="created-date">Created on: 19/06/2023</p>
+                    <div class="task-options">
+                        <label class="attach-file">
+                            <i class="fas fa-paperclip"></i> Attach file
+                            <input type="file" class="file-input" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Close main-content -->
+    </div> <!-- Close dashboard -->
+
+    <!-- Modal for Adding Task -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTaskModal()">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <label for="taskTitle">Task Title:</label>
+                <input type="text" id="taskTitle" name="taskTitle" required><br>
+
+                <label for="taskDescription">Description:</label>
+                <textarea id="taskDescription" name="taskDescription" required></textarea><br>
+
+                <label for="taskPriority">Priority:</label>
+                <select id="taskPriority" name="taskPriority">
+                    <option value="High">High</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Low">Low</option>
+                </select><br>
+
+                <button type="button" onclick="addTask()">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+            <div class="completed-tasks">
+                <h2>Completed Task</h2>
+                <div class="task">
+                    <h3>Walk the dog</h3>
+                    <p>Take the dog to the park and bring treats as well.</p>
+                    <p><strong>Completed 2 days ago</strong></p>
+                </div>
+                <!-- Repeat similar task blocks for other completed tasks -->
             </div>
         </div> <!-- Close main-content -->
     </div> <!-- Close dashboard -->

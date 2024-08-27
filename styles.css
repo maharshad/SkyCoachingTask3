@@ -164,26 +164,171 @@ body {
 .welcome-message .wave {
     font-size: 32px;
 }
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .task-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.to-do, .task-status {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.to-do .task {
-    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.todo-icon {
+    color: lightgrey;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.add-task {
+    font-size: 14px;
+    color: red;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+}
+
+.priority-icon {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.created-date {
+    color: grey;
+    font-size: 12px;
+}
+
+.task-options {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: grey;
+}
+
+.task-options i {
+    margin-right: 5px;
+}
+
+.attach-file {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
 }
 
 .status-item {
@@ -192,6 +337,40 @@ body {
     margin-bottom: 10px;
 }
 
+.status-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.status-circle span {
+    font-size: 18px;
+}
+
+.completed-tasks {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.task {
+    margin-bottom: 20px;
+}
+
+.task h4 {
+    margin: 0 0 10px;
+}
+
+.task p {
+    margin: 0 0 5px;
+}
 .status-circle {
     width: 50px;
     height: 50px;

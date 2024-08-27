@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <link rel="stylesheet" href="changepass.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="dashboard">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="C:\Users\Ahmad\Desktop\SkyCouchingTask3\img1.png" alt="Profile Picture">
+                <h2>Maha Arshad</h2>
+                <p>mak@gmail.com</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="vitaltask.html"><i class="fas fa-exclamation-circle"></i> Vital Task</a></li>
+                    <li><a href="mytask1.html"><i class="fas fa-tasks"></i> My Task</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> Task Categories</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside></div>
+
+        <div class="content">
+            <div class="change-password-container">
+                <h2>Change Password</h2>
+                <div class="user-info">
+                    <img src="C:\Users\Ahmad\Desktop\SkyCouchingTask3\img1.png" alt="User Profile Picture">
+                    <div class="user-details">
+                        <h3>Maha Arshad</h3>
+                        <p>mak@gmail.com</p>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" placeholder="Enter current password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm new password">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-update">Update Password</button>
+                        <button type="button" class="btn-cancel">Cancel</button>
+                    </div>
+                </form>
+                <a href="#" class="go-back">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

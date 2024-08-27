@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header .go-back {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.task-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.priority-group {
+    grid-column: 1 / 3;
+}
+
+.priority-group div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the priority options */
+}
+
+.priority-group input {
+    margin-right: 5px;
+}
+
+.priority-group label {
+    display: flex;
+    align-items: center;
+}
+
+.extreme-dot,
+.moderate-dot,
+.low-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.extreme-dot {
+    background-color: red;
+}
+
+.moderate-dot {
+    background-color: blue;
+}
+
+.low-dot {
+    background-color: green;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.upload-box img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.upload-box p {
+    margin: 10px 0;
+    color: #777;
+}
+
+.browse-btn {
+    background-color: #ccc;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.done-btn {
+    background-color: #f95c5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin-top: 20px;
+}
